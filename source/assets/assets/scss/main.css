@@ -1,0 +1,33 @@
+@import "common/media-queries.scss";
+@import "common/variables.scss";
+@import "common/main.scss";
+@import "common/modal.scss";
+@import "common/header.scss";
+@import "common/footer.scss";
+@import "common/animations.scss";
+
+
+@import "art/art.scss";
+@import "about-coach/about-coach.scss";
+@import "corporate/corporate.scss";
+@import "morning/morning.scss";
+@import "blog/archive.scss";
+@import "blog/single.scss";
+@import "contacts/contacts.scss";
+@import "individual/individual.scss";
+@import "index/index.scss";
+@import "poster/archive-poster.scss";
+@import "gallery/gallery.scss";
+@import "gallery/portfolio-archive.scss";
+@import "gallery/portfolio-single.scss";
+
+@import "land/intro.scss";
+@import "land/speak.scss";
+@import "land/textblue.scss";
+@import "land/skills.scss";
+@import "land/work.scss";
+@import "land/advantages.scss";
+@import "land/order-form.scss";
+@import "land/coach.scss";
+@import "land/programme.scss";
+@import "land/variaty.scss";

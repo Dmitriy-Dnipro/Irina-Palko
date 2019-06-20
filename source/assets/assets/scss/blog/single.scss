@@ -1,0 +1,242 @@
+#single-blog-intro{
+	background : {
+		size: cover;
+		repeat: no-repeat;
+		position: center center;
+	}
+}
+
+#single-blog{
+	padding: 66px 0 117px;
+	@include respond-up-to(sm){
+		padding: 18px 0 76px;
+	}
+	@include respond-exact(md){
+		padding: 27px 0 89px;
+	}
+	.ipad-padding{
+		@include respond-exact(md){
+			padding: 0 40px;
+		}
+	}
+	.breadcrumbs{
+		margin-bottom: 70px;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		@include respond-up-to(sm){
+			margin-bottom: 25px;
+		}
+		@include respond-exact(md){
+			margin-bottom: 57px;
+		}
+		a{
+			font-size: 14px;
+			color: #636363;
+			letter-spacing: 0.05em;
+			@include respond-up-to(sm){
+				font-size: 10px;
+			}
+			@include respond-exact(md){
+				font-size: 11px;
+			}
+		}
+		.breadcrumbs__current{
+			font-weight: 700;
+		}
+	}
+	.post-category{
+		font-size: 11px;
+		line-height: 1.0em;
+		margin-bottom: 5px;
+		@include respond-up-to(sm){
+			font-size: 9px;
+		}
+	}
+	.category{
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #636363;
+		letter-spacing: 0.1em;
+		margin-bottom: 14px;
+		display: inline-block;
+		@include respond-up-to(sm){
+			font-size: 9px;
+			margin-bottom: 4px;
+		}
+		@include respond-exact(md){
+			margin-bottom: 0;
+		}
+	}
+	h1{
+		font-size: 35px;
+		font-weight: 700;
+		margin-bottom: 45px;
+		letter-spacing: 0.01em;
+		@include respond-up-to(sm){
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+		@include respond-exact(md){
+			letter-spacing: 0;
+			margin-bottom: 24px;
+		}
+	}
+	blockquote{
+		margin: 0 0 30px 25px;
+		padding: 20px 0 20px 20px;
+		border-left: 3px solid $brand-green;
+	}
+	p{
+		line-height: 1.2em;
+		margin-bottom: 30px;
+		color: #636363;
+		text-align: justify;
+		&:last-child{
+			margin-bottom: 0px;
+		}
+		@include respond-up-to(sm){
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+		@include respond-exact(md){
+			margin-bottom: 25spx;
+		}
+	}
+	img{
+		margin-bottom: 30px;
+		@include respond-exact(md){
+			margin-bottom: 25spx;
+		}
+	}
+	.share-button{
+		position: absolute;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+		@include respond-up-to(sm){
+			right: 3px;
+		}
+		svg{
+			width: 25px;
+			height: 25px;
+		}
+	}
+	.social-bar{
+		position: absolute;
+		right: -3px;
+		top: 50px;
+		
+		opacity: 0;
+		visibility: hidden;
+		transition: all ease 0.5s;
+		@include respond-up-to(sm){
+			right: 3px;
+		}
+		.addtoany_list{
+			a{
+				padding: 0;
+				display: block;
+				margin-bottom: 16px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				img{
+					margin-bottom: 0;
+				}
+			}
+		} 
+		
+	}
+	.make-visisble{
+		opacity: 1;
+		visibility: visible;
+		transition: all ease 0.5s;
+	}
+	.post-ratings{
+		font-size: 14px;
+		@include respond-up-to(sm){
+			font-size: 12px;
+		}
+		img{
+			margin-bottom: 0;
+			margin-right: 10px;
+			&:last-of-type{
+				margin-right: 40px;
+				@include respond-up-to(sm){
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+#similar-blogs{
+	padding: 0 0 160px;
+	@include respond-up-to(sm){
+		padding: 0 0 90px;
+	}
+	@include respond-exact(md){
+		padding: 0 0 120px;
+	}
+	.posts-wrapper{
+		margin-bottom: 0 !important;
+		.post-wrapper{
+			@include respond-up-to(md){
+				margin: 0 auto;
+			}
+		}
+	}
+	h2{
+		letter-spacing: 0.01em;
+		font-size: 50px;
+		font-weight: 700;
+		margin-bottom: 70px;
+		@include respond-up-to(sm){
+			margin-bottom: 9px;
+			font-size: 20px;
+		}
+		@include respond-exact(md){
+			font-size: 30px;
+			margin-bottom: 25px;
+		}
+	}
+	.owl-nav{
+		button{
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+	
+			@include respond-up-to(sm){
+				width: 25px;
+				height: 25px;
+				background-size: 25% auto;
+			}
+	
+			span{
+				display: none;
+			}
+			background : {
+				position: center center;
+				repeat: no-repeat;
+				color: $white;
+			}
+			
+			position: absolute;
+	
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.owl-prev{
+			background-image: url('../images/common/arrowLeftSlider.png');
+			left: 0;
+			right: auto;
+		}
+		.owl-next{
+			background-image: url('../images/common/arrowRightSlider.png');
+			left: auto;
+			right: 0;
+		}
+	}
+}

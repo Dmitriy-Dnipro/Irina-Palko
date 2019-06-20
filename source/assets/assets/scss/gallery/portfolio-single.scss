@@ -1,0 +1,47 @@
+#single-portfolio-intro{
+	background : {
+		image: url(../images/gallery/backgroundSinglePortfolio.jpg);
+		size: cover;
+		repeat: no-repeat;
+		position: center center;
+	}
+}
+
+#photos{
+	padding: 175px 0 240px;
+	@include respond-up-to(sm){
+		padding: 50px 0 70px;
+	}
+	@include respond-exact(md){
+		padding: 75px 0 105px;
+	}
+	.photo-preview-wrapper{
+	    display: flex;
+	    flex-flow: row wrap;
+	    position: relative;
+		.photo-preview{
+			display: none;
+			border-radius: $radius;
+			background : {
+				image: url(../images/gallery/backgroundSinglePortfolio.jpg);
+				size: cover;
+				repeat: no-repeat;
+				position: center center;
+			}
+			width: 170px;
+			height: 170px;
+			margin: 0 auto 25px;
+			@include respond-up-to(sm){
+				width: 135px;
+				height: 135px;
+			}
+			@include respond-exact(md){
+				width: 220px;
+				height: 220px;
+			}
+		}
+	}
+	.show-more-blogs{
+		margin-top: 85px;
+	}
+}

@@ -1,0 +1,313 @@
+.modal-fullscreen-menu {
+    z-index: 10000;
+    .modal-dialog {
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 100%;
+        width: 600px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        text-align: right;
+        padding: 90px 105px 0 0;
+        .list-group{
+        	margin-bottom: 80px;
+        	li{
+        		padding: 25px 0;
+                &:hover{
+                    a{
+                        &:before{
+                            position: absolute;
+                            width: 19px;
+                            height: 40px;
+                            top: -6px;
+                            left: -35px;
+                            display: block;
+                            content: '';
+                            background-image: url(../images/common/menuBefore.svg);
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            @include respond-up-to(sm){
+                                top: 8px;
+                            }
+                        }
+                    }
+                }
+                a{
+                    font-size: 24px;
+                    line-height: 1em;
+                    position: relative;
+                    cursor: pointer;
+                    // &:focus{
+                    //     color: #fff;
+                    //     font-size: 13px;
+                    //     letter-spacing: .05em;
+                    //     line-height: 1.4em;
+                    // }
+                }
+        		@include respond-up-to(sm){
+        			font-size: 20px;
+        		}
+        		
+        	}
+        }
+    }
+}
+
+#modalForm, #modalFormStandart, #modalFormOptimal, #modalFormPremium, #modalFormOrder{
+    text-align: center;
+    
+    &:before{
+        display: inline-block;
+        vertical-align: middle;
+        content: ' ';
+        height: 100%;
+    }
+    .modal-dialog{
+        width: 830px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+        
+        .modal-content{
+            .form-block{
+                background: transparent;
+                .form-upper-text{
+                    font-size: 32px;
+                    font-weight: 500;
+                    margin-bottom: 65px;
+                    line-height: 1.4em;
+                }
+                &:before{
+                    display: none;
+                }
+            }
+        }   
+    }
+}
+
+#modalFormVideo{
+    text-align: center;
+    &:before{
+        display: inline-block;
+        vertical-align: middle;
+        content: ' ';
+        height: 100%;
+    }
+    .modal-dialog{
+        width: 830px;
+        display: inline-block;
+        vertical-align: middle;
+
+        .modal-content{
+            .form-block{
+                background: transparent;
+                .form-upper-text{
+                    font-size: 32px;
+                    margin-bottom: 65px;
+                    line-height: 1.4em;
+                    span{
+                        font-size: 1.0em;
+                        font-weight: 500;
+                    }
+                }
+                &:before{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.modal{
+    .modal-dialog{
+        @include respond-up-to(md){
+            max-width: 90%;
+        }
+    }
+}
+
+.modal-review, .modal-video{
+    text-align: center;
+    &:before{
+        display: inline-block;
+        vertical-align: middle;
+        content: ' ';
+        height: 100%;
+    }
+    .modal-dialog{
+        width: 567px;
+        display: inline-block;
+        vertical-align: middle;
+        .modal-content{
+            .review-wrapper{
+                padding: 48px 35px 48px 52px;
+                .form-upper-text{
+                    text-align: left;
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 4px;
+                }
+                .position{
+                    text-align: left;
+                    font-size: 12px;
+                    margin-bottom: 38px;
+                }
+                p{
+                    text-align: left;
+                    margin-bottom: 27px;
+                    &:last-of-type{
+                        margin-bottom: 0;
+                    }
+                }
+                iframe{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.modalFormTab{
+    text-align: center;
+    // @include respond-to(md){
+    //     display: none !important;
+    // }
+    &:before{
+        display: inline-block;
+        vertical-align: middle;
+        content: ' ';
+        height: 100%;
+    }
+    .modal-dialog{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .modal-content{
+        padding: 40px 25px 50px;
+        @include respond-up-to(sm){
+            padding: 40px 40px 50px 25px;
+        }
+    }
+
+    .tab-content-work{
+        @include respond-up-to(sm){
+            text-align: left;
+        }
+        .tab-heading{
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+    
+            margin-bottom: 47px;
+    
+            position: relative;
+            @include respond-up-to(sm){
+                font-size: 16px;
+                margin-bottom: 65px;
+                padding-left: 35px;
+            }
+            &:before{
+                position: absolute;
+                content: '';
+                display: block;
+    
+                top: 13px;
+                left: -133px;
+    
+                width: 113px;
+                height: 3px;
+    
+                background-color: $yellow;
+    
+                @include respond-up-to(sm){
+                    width: 28px;
+                    height: 2px;
+                    left: -5px;
+                }
+    
+            }
+        }
+        ul{
+            list-style: none;
+            li{
+                padding-left: 45px;
+                font-size: 20px;
+                margin-bottom: 60px;
+                position: relative;
+                span{
+                    font-size: 0.8em;
+                }
+                @include respond-up-to(sm){
+                    font-size: 14px;
+                    padding-left: 35px;
+                    margin-bottom: 59px;
+                }
+                &:before{
+                    position: absolute;
+                    display: block;
+                    content: '';
+    
+                    top: 6px;
+                    left: 0;
+    
+                    width: 14px;
+                    height: 14px;
+    
+                    background : {
+                        repeat: no-repeat;
+                        position: center center;
+                        image: url('../images/land/work/before.png');
+                    }
+    
+                    @include respond-up-to(sm){
+                        top: 1px;
+                    }
+                }
+                &:last-child(){
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// .modal-video{
+//     text-align: center;
+//     &:before{
+//         display: inline-block;
+//         vertical-align: middle;
+//         content: ' ';
+//         height: 100%;
+//     }
+//     .modal-dialog{
+//         width: 567px;
+//         display: inline-block;
+//         vertical-align: middle;
+//         .modal-content{
+//             .review-wrapper{
+//                 padding: 48px 35px 48px 52px;
+//                 .form-upper-text{
+//                     text-align: left;
+//                     font-size: 24px;
+//                     font-weight: 700;
+//                     margin-bottom: 4px;
+//                 }
+//                 .position{
+//                     text-align: left;
+//                     font-size: 12px;
+//                     margin-bottom: 38px;
+//                 }
+//                 p{
+//                     text-align: left;
+//                     margin-bottom: 27px;
+//                     &:last-of-type{
+//                         margin-bottom: 0;
+//                     }
+//                 }
+//             }
+//         }
+//     }   
+// }

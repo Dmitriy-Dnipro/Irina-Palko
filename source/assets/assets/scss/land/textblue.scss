@@ -1,0 +1,26 @@
+#textBlue{
+    background: $brand-green;
+    padding: 100px 0;
+    @include respond-up-to(md){
+        padding: 22px 0;
+    }
+    p{
+        text-transform: uppercase;
+        font-size: 30px;
+        text-align: center;
+        color: $white;
+        line-height: 1.5em;
+        @include respond-up-to(md){
+            font-size: 14px;
+        }
+        @include respond-to(lg){
+            padding: 0 35px;
+        }
+        span{
+            font-weight: 700;
+            font-size: inherit;
+            text-transform: inherit;
+            color: inherit;
+        }
+    }
+}

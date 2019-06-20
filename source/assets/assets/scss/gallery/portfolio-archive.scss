@@ -1,0 +1,95 @@
+#archive-portfolio-intro{
+	background : {
+		image: url(../images/gallery/backgroundArchivePortfolio.jpg);
+		size: cover;
+		repeat: no-repeat;
+		position: center center;
+	}
+	.flex-additional-wrap{
+		flex-direction: column;
+	}
+	h1{
+		margin: 15% auto 15px;
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(0.1deg, rgba(0, 0, 0, 0.69) 0.18%, rgba(0, 0, 0, 0.13) 109.26%);
+		mix-blend-mode: multiply;
+	}
+}
+
+#archive-gallery{
+	padding: 120px 0;
+	@include respond-up-to(sm){
+		padding: 80px 0;
+	}
+	@include respond-exact(md){
+		padding: 80px 0 110px;
+	}
+	.projects{
+		margin-bottom: 55px;
+		@include respond-up-to(sm){
+			overflow: scroll;
+		}
+		.projects-filter{
+			@include respond-up-to(sm){
+				width: 750px;
+			}
+			a{
+				@include respond-up-to(sm){
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.common-projects-wrapper{
+		min-height: auto !important;
+		.envira-gallery-wrap{
+			margin: 0 auto;
+			.envira-gallery-public{
+				margin: 0 auto;
+			}
+		}
+		img{
+			border-radius: $radius;
+			@include respond-up-to(sm){
+				width: 140px;
+				height: 140px;
+				
+			}
+			@include respond-up-to(md){
+				object-fit: cover;
+			}
+			@include respond-exact(md){
+				width: 220px;
+				height: 220px;
+			}
+		}
+		.fb-link{
+			display: block;
+			margin: 57px auto 0;
+			width: intrinsic;
+			width: -moz-max-content;
+			width: -webkit-max-content;
+			text-align: center;
+			font-weight: 700;
+			font-size: 14px;
+			text-align: center;
+			letter-spacing: 0.09em;
+			text-decoration-line: underline;
+			text-transform: uppercase;
+			color: $brand-green;
+			@include respond-up-to(sm){
+				margin: 15px auto 0;
+			}
+			@include respond-exact(md){
+				margin: 24px auto 0;
+			}
+		}
+	}
+}

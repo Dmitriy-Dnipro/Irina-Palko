@@ -1,0 +1,196 @@
+.land-skills{
+    padding: 105px 0 130px;
+    @include respond-up-to(md){
+        padding: 40px 0 50px;
+    }
+}
+#skills{
+    position: relative;
+    overflow: hidden;
+    //background-color: #FAFAFA;
+    // @include respond-up-to(md){
+    //     padding: 40px 0 50px;
+    // }
+    .textWrapper{
+        padding-left: 65px;
+        @include respond-up-to(sm){
+            text-align: center;
+        }
+        @include respond-up-to(lg){
+            padding-left: 0;
+        }
+        h2{
+            font-size: 30px;
+            text-transform: uppercase;
+            margin-bottom: 95px;
+            span{
+                font-size: inherit;
+                text-transform: inherit;
+                font-weight: 700;
+            }
+            @include respond-up-to(sm){
+                font-size: 16px;
+                margin-bottom: 64px;
+            }
+            @include respond-exact(md){
+                text-align: center;
+                font-size: 24px;
+                margin-bottom: 38px;
+            }
+        }
+        ul{
+            list-style: none;
+            @include respond-exact(md){
+                display: flex;
+                flex-wrap: wrap;
+            }
+            li{
+                margin-bottom: 45px;
+                @include respond-up-to(sm){
+                    margin-bottom: 75px;
+                }
+                @include respond-exact(md){
+                    width: 50%;
+                    padding-left: 75px;
+                    margin-bottom: 31px;
+                }
+                &:last-child(){
+                    margin-bottom: 0;
+                }
+                .upperText{
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    margin-bottom: 25px;
+                    padding-left: 60px;
+                    font-weight: 700;
+                    position: relative;
+                    @include respond-up-to(sm){
+                        font-size: 18px;
+                        padding-left: 0;
+                        margin-bottom: 9px;
+                    }
+                    @include respond-exact(md){
+                        font-size: 18px;
+                        padding-left: 50px;
+                        margin-bottom: 31px;
+                    }
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        display: block;
+
+                        top: 47%;
+                        transform: translateY(-50%);
+                        left: 0;
+
+                        width: 14px;
+                        height: 14px;
+
+                        background : {
+                            position: center center;
+                            repeat: no-repeat;
+                            image: url('../images/land/skills/before.png');
+                        }
+
+                        @include respond-up-to(sm){
+                            top: -30px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+
+                        @include respond-exact(md){
+                            top: 1px;
+                        }
+                    }
+                }
+                .bottomText{
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .fullWidthVideo{
+        width: 100% !important;
+        .videoWrapper{
+            border-radius: 0 !important;
+        }
+        .button{
+            left: 0 !important;
+
+            transition: all 0.5s ease-out;
+        }
+    }
+    .video{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 47%;
+
+        -webkit-transition: all ease-in-out 0.5s;
+        -o-transition: all ease-in-out 0.5s;
+        transition: all ease-in-out 0.5s;
+        //overflow: hidden;
+
+        @include respond-up-to(md){
+            display: none;
+        }
+
+        .button{
+            width: 93px;
+            height: 93px;
+
+            display: flex;
+            position: absolute;
+
+            top: 50%;
+            transform: translateY(-50%);
+            left: -46.5px;
+
+            background-color: $brand-green;
+            border-radius: 50%;
+            cursor: pointer;
+
+
+            z-index: 4;
+
+            transition: all 0.5s ease-in;
+            svg{
+                width: 23px;
+                height: 31px;
+
+                margin: auto;
+            }
+        }
+        
+        .videoWrapper{
+            // border-bottom-left-radius: 100%;
+            // border-top-left-radius: 100%;
+            background-color: $black;
+
+            position: absolute;
+            z-index: 3;
+            height: 150%;
+            width: 100%;
+            top: -25%;
+            right: 0;
+            overflow: hidden;
+            border-top-left-radius: 100%;
+            border-bottom-left-radius: 100%;
+            -webkit-transition: all ease-in-out 0.5s;
+            -o-transition: all ease-in-out 0.5s;
+            transition: all ease-in-out 0.5s;
+        }
+    }
+}
+
+#landingVideo{
+    @include respond-to(md){
+        display: none;
+    }
+    width: 100%;
+    //min-height: 360px;
+
+    //background-color: $black;
+}

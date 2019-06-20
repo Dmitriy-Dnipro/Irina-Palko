@@ -1,0 +1,239 @@
+#work{
+    padding: 65px 0;
+    @include respond-up-to(sm){
+        padding: 40px 0;
+    }
+    h2{
+        margin-bottom: 85px;
+        @include respond-up-to(sm){
+            margin-bottom: 30px;
+        }
+        @include respond-exact(md){
+            margin-bottom: 27px;
+        }
+    }
+    .textTop{
+        @include respond-up-to(sm){
+            font-size: 14px;
+            margin-left: 8px;
+            margin-bottom: 26px;
+            padding: 2px 0 2px 43px;
+        }
+        @include respond-exact(md){
+            font-size: 20px;
+            margin-left: 83px;
+            margin-bottom: 65px;
+            padding: 5px 0 5px 45px;
+        }
+        text-transform: uppercase;
+        border-left: 2px solid $black;
+        @include respond-to(md){
+            display: none;
+        }
+    }
+    .blockWrapper{
+        width: 505px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        @include respond-up-to(md){
+            width: 100%;
+        }
+        @include respond-exact(md){
+            justify-content: space-around;
+        }
+        .block{
+            width: 245px;
+            height: 225px;
+            background-color: $brand-blue;
+            border-radius: $radius;
+            margin-bottom: 5px;
+
+            padding: 28px 15px;
+            position: relative;
+
+            transition: all ease-out 0.5s;
+            @include respond-up-to(sm){
+                width: 100%;
+                height: 132px;
+                padding: 15px;
+            }
+            @include respond-exact(md){
+                width: 355px;
+                padding: 20px 15px;
+                height: 225px;
+            }
+            .number{
+                font-size: 24px;
+                font-weight: 700;
+                color: $white;
+                @include respond-up-to(md){
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+
+            .tabImage{
+                opacity: 0;
+                position: absolute;
+                left: 50%;
+                top: 45%;
+                transform: translateX(-50%) translateY(-50%);
+                transition: all ease-out 0.5s;
+                @include respond-up-to(md){
+                    max-width: 60px;
+                }
+            }
+
+            .text{
+                position: absolute;
+                font-size: 18px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $white;
+                bottom: 15px;
+
+                width: 90%;
+                left: 50%;
+                transform: translateX(-50%);
+
+                text-align: center;
+                @include respond-up-to(md){
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+        .current{
+            transform: scale(1.1);
+            background-color: $yellow;
+            transition: all ease-out 0.5s;
+            z-index: 3;
+            .tabImage{
+                opacity: 1;
+                transition: all ease-out 0.5s;
+            }
+            @include respond-up-to(md){
+                transform: scale(1.05);
+            }
+        }
+    }
+    .headText{
+        position: relative;
+        font-size: 28px;
+        padding: 10px 0;
+        text-transform: uppercase;
+        line-height: 1.5em;
+        margin-bottom: 105px;
+        &:before{
+            position: absolute;
+            display: block;
+            content: '';
+
+            top: 0;
+            left: -20px;
+
+            height: 100%;
+            width: 2px;
+
+            background-color: $black;
+        }
+        @include respond-up-to(md){
+            display: none !important;
+        }
+    }
+    .tab-content-work{
+        display: none;
+        @include respond-up-to(md){
+            display: none !important;
+        }
+    }
+
+    .tab-content-work.current{
+        display: block;
+    }
+    .tab-content-work{
+        @include respond-up-to(sm){
+            text-align: left;
+        }
+        .tab-heading{
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+    
+            margin-bottom: 47px;
+    
+            position: relative;
+            @include respond-up-to(sm){
+                font-size: 16px;
+                margin-bottom: 65px;
+                padding-left: 35px;
+            }
+            &:before{
+                position: absolute;
+                content: '';
+                display: block;
+    
+                top: 13px;
+                left: -133px;
+    
+                width: 113px;
+                height: 3px;
+    
+                background-color: $yellow;
+    
+                @include respond-up-to(sm){
+                    width: 28px;
+                    height: 2px;
+                    left: -5px;
+                }
+
+                @include respond-exact(lg){
+                    display: none;
+                }
+    
+            }
+        }
+        ul{
+            list-style: none;
+            li{
+                padding-left: 45px;
+                font-size: 20px;
+                margin-bottom: 60px;
+                position: relative;
+                span{
+                    font-size: 0.8em;
+                }
+                @include respond-up-to(sm){
+                    font-size: 14px;
+                    padding-left: 35px;
+                    margin-bottom: 59px;
+                }
+                &:before{
+                    position: absolute;
+                    display: block;
+                    content: '';
+    
+                    top: 6px;
+                    left: 0;
+    
+                    width: 14px;
+                    height: 14px;
+    
+                    background : {
+                        repeat: no-repeat;
+                        position: center center;
+                        image: url('../images/land/work/before.png');
+                    }
+    
+                    @include respond-up-to(sm){
+                        top: 1px;
+                    }
+                }
+                &:last-child(){
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

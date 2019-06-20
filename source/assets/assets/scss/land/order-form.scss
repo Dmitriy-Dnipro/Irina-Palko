@@ -1,0 +1,9 @@
+.land-order-form{
+    margin-bottom: 87px;
+    @include respond-up-to(sm){
+        margin-bottom: 40px;
+    }
+    @include respond-exact(md){
+        margin-bottom: 81px;
+    }
+}

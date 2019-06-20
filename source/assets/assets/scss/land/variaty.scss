@@ -1,0 +1,220 @@
+#variaties{
+    padding: 70px 0;
+    @include respond-up-to(sm){
+        padding: 35px 0;
+    }
+    @include respond-exact(md){
+        padding: 65px 0 50px;
+    }
+    h2{
+        margin-bottom: 60px;
+        @include respond-up-to(sm){
+            margin-bottom: 35px;
+        }
+        @include respond-exact(md){
+            margin-bottom: 74px;
+        }
+    }
+    .variatyWrapper{
+        .owl-item{
+            .variaty{
+                padding: 40px 30px 55px;
+                border: 1px solid transparent;
+                transition: all 0.5s ease-in-out;
+                margin-bottom: 115px;
+                &:hover{
+                    border: 1px solid $brand-blue;
+                    transition: all 0.5s ease-in-out;
+                }
+                //border-radius: $radius;
+                border-radius: 15px;
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+                width: 354px;
+                max-width: 100%;
+                @include respond-up-to(sm){
+                    width: 291px;
+                    margin: 0 auto;
+                    margin-bottom: 45px;
+                }
+                @include respond-exact(md){
+                    margin-bottom: 69px;
+                    //width: auto;
+                }
+                background : {
+                    position: center top;
+                    repeat: no-repeat;
+                    image : url('../images/land/variaties/variatyTopBlue.jpg');
+                }
+                .smallText{
+                    color: $white;
+                    font-size: 12px;
+                    margin-bottom: 19px;
+                    span{
+                        font-size: inherit;
+                        font-weight: 700;
+                        color: inherit;
+                    }
+                }
+                .price{
+                    color: $white;
+                    font-size: 18px;
+                    margin-bottom: 9px;
+                    span{
+                        font-size: 36px;
+                        font-weight: 700;
+                        color: inherit;
+                        letter-spacing: 0.05em;
+                        margin-right: 15px;
+                    }
+                }
+                .priceCrossed{
+                    font-size: 18px;
+                    color: $white;
+                    text-transform: uppercase;
+                    text-decoration: line-through;
+                    margin-bottom: 34px;
+                }
+                .variatyData{
+                    border-radius: $radius;
+                    background-color: $white;
+                    padding: 15px 30px;
+                    margin-bottom: 55px;
+                    box-shadow: 0 4px 20px rgba(0,0,0,.05);
+                    .variatyName{
+                        font-size: 12px;
+                        text-align: center;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        line-height: 2em;
+                        span{
+                            color: inherit;
+                            font-weight: 700;
+                            font-size: 20px;
+                            letter-spacing: inherit;
+                            text-transform: initial;
+                        }
+                    }
+                }
+                ul{
+                    list-style: none;
+                    margin-bottom: 55px;
+                    li{
+                        padding-left: 65px;
+                        font-size: 14px;
+                        margin-bottom: 20px;
+                        position: relative;
+                        @include respond-up-to(sm){
+                            padding-left: 50px;
+                        }
+                        &:last-of-type(){
+                            margin-bottom: 0;
+                        }
+                        &:before{
+                            position: absolute;
+                            display: block;
+                            content: '';
+    
+                            width: 12px;
+                            height: 12px;
+    
+                            top: 2px;
+                            left: 30px;
+    
+                            background : {
+                                position: center center;
+                                repeat: no-repeat;
+                                image: url('../images/land/variaties/correct.png');
+                            }
+                            @include respond-up-to(sm){
+                                left: 15px;
+                            }
+                        }
+                    }
+                }
+                .common-button-styles{
+                    background: $brand-blue;
+                    border-color: $brand-blue;
+                    color: $white;
+                    &:hover{
+                        background: transparent;
+                        color: $brand-blue;
+                    }
+                }
+            }
+            .optimal{
+                background-image: url('../images/land/variaties/variatyYellow.jpg');
+                border: 1px solid $brand-dark-yellow;
+                &:hover{
+                    border: 1px solid $brand-dark-yellow;
+                }
+                .common-button-styles{
+                    background-color: $brand-dark-yellow;
+                    border-color: $brand-dark-yellow;
+                    &:hover{
+                        color: $brand-dark-yellow;
+                    }
+                }
+                .variatyName{
+                    color: $brand-dark-yellow;
+                }
+                ul{
+                    li{
+                        &:before{
+                            background-image: url('../images/land/variaties/correctYellow.png');
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .motto{
+        font-size: 24px;
+        line-height: 1.5em;
+        @include respond-up-to(sm){
+            font-size: 16px;
+        }
+        @include respond-exact(md){
+            font-size: 18px;
+        }
+        span{
+            font-size: inherit;
+            font-weight: 700;
+            color: $brand-green;
+        }
+    }
+
+    .owl-nav{
+        button{
+            position: absolute;
+            top: 39%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            background : {
+                repeat: no-repeat;
+                position: center center;
+            }
+            span{
+                @include respond-up-to(md){
+                    display: none;
+                }
+            }
+            // transform: translateY(50%);
+        }
+        .owl-prev{
+            left: 0;
+            background-image: url('../images/land/intro/buttonLeft.png');
+        }
+        .owl-next{
+            right: 0;
+            background-image: url('../images/land/intro/buttonRight.png');
+        }
+    }
+
+    .container{
+        @include respond-exact(md){
+            width: 100%;
+        }
+    }
+}

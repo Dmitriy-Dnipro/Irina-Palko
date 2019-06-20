@@ -1,0 +1,170 @@
+#speak{
+    padding: 75px 0 140px;
+    @include respond-up-to(sm){
+        padding: 40px 0 0;
+    }
+    @include respond-exact(md){
+        padding: 70px 0 22px;
+    }
+    .subheading{
+        margin-bottom: 73px;
+        @include respond-up-to(sm){
+            margin-bottom: 30px;
+        }
+        @include respond-exact(md){
+            margin-bottom: 54px;
+        }
+    }
+    .wrap{
+        .dataWrapper{
+            margin: 15px;
+            padding: 39px 15px 60px 25px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            transition: all 0.5s ease-out;
+            box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.06);
+            position: relative;
+            @include respond-up-to(sm){
+                padding: 30px 35px 30px;
+                margin: 14px auto;
+                max-width: 297px;
+            }
+            @include respond-exact(md){
+                padding: 50px 85px 60px;
+                max-width: 471px;
+                margin: 25px;
+                box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.06);
+            }
+            &:hover{
+                border: 1px solid $brand-green;
+                transition: all 0.5s ease-out;
+                .common-button-styles{
+                    background-color: $brand-green;
+                    color: $white;
+                }
+            }
+            .dataNumber{
+                font-size: 48px;
+                text-decoration-line: underline;
+                text-transform: uppercase;
+                font-weight: 700;
+                color: $brand-green;
+                margin-bottom: 69px;
+                @include respond-up-to(md){
+                    font-size: 30px;
+                    margin-bottom: 31px;
+                }
+            }
+            .dataText{
+                font-size: 20px;
+                font-weight: 700;
+                text-decoration-line: underline;
+                text-transform: uppercase;
+                margin-bottom: 63px;
+                @include respond-up-to(md){
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                }
+            }
+            .dataList{
+                list-style: none;
+                margin-bottom: 70px;
+                li{
+                    margin-bottom: 21px;
+                    padding-left: 25px;
+                    position: relative;
+                    @include respond-up-to(md){
+                        font-size: 14px;
+                        margin-bottom: 30px;
+                        padding-left: 35px;
+                    }
+                    &:last-child(){
+                        margin-bottom: 0; 
+                    }
+                    &:before{
+                        position: absolute;
+                        content: '';
+                        display: block;
+    
+                        width: 11px;
+                        height: 11px;
+    
+                        top: 5px;
+                        left: 0;
+    
+                        border: 3px solid $brand-green;
+                        @include respond-up-to(md){
+                            top: 1px;
+                        }
+                    }
+                }
+            }
+            .common-button-styles{
+                border-color: $white;
+                color: $black;
+                background-color: $white;
+            }
+            &:nth-child(2){
+                &:hover{
+                    .dataButton{
+                        background-color: $brand-blue;
+                    }
+                }
+                .dataNumber{
+                    color: $brand-blue;
+                }
+                .dataList{
+                    li{
+                        &:before{
+                            border: 3px solid $brand-blue;
+                        } 
+                    }
+                }  
+            }
+        }
+    }
+    .owl-nav{
+        button{
+            position: absolute;
+            top: 39%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            background : {
+                repeat: no-repeat;
+                position: center center;
+            }
+            span{
+                @include respond-up-to(md){
+                    display: none;
+                }
+            }
+            @include respond-exact(md){
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                border-radius: 50%;
+
+                background-color: $white;
+
+                width: 45px;
+                height: 45px;
+
+                top: 50%;
+            }
+            // transform: translateY(50%);
+        }
+        .owl-prev{
+            left: -10px;
+            background-image: url('../images/land/intro/buttonLeft.png');
+            @include respond-exact(md){
+                left: -71px;
+            }
+        }
+        .owl-next{
+            right: -10px;
+            background-image: url('../images/land/intro/buttonRight.png');
+            @include respond-exact(md){
+                right: -71px;
+            }
+        }
+    }
+}

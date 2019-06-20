@@ -1,0 +1,200 @@
+#coach{
+    padding-bottom: 105px;
+    @include respond-up-to(sm){
+        padding-bottom: 0;
+    }
+    @include respond-exact(md){
+        padding-bottom: 92px;
+    }
+    h2{
+        margin-bottom: 85px;
+        @include respond-up-to(sm){
+            margin-bottom: 35px;
+        }
+        @include respond-exact(md){
+            margin-bottom: 50px;
+        }
+    }
+    .description{
+        font-size: 20px;
+        margin-bottom: 85px;
+        line-height: 1.5em;
+        span{
+            font-size: inherit;
+            font-weight: 700;
+        }
+        @include respond-up-to(sm){
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 17px;
+            br{
+                display: none;
+            }
+        }
+        @include respond-exact(md){
+            font-size: 18px;
+            margin-bottom: 35px;
+            br{
+                display: none;
+            }
+        }
+    }
+    .coloredImage{
+        @include respond-to(sm){
+            display: none;
+        }
+        background-color: $border-color-light;
+        text-align: center;
+        margin-bottom: 54px;
+    }
+    ul{
+        list-style: none;
+        margin-bottom: 48px;
+        @include respond-exact(md){
+            margin-bottom: 53px;
+        }
+        li{
+            font-size: 20px;
+            margin-bottom: 40px;
+            padding-left: 40px;
+            position: relative;
+            line-height: 1.3em;
+            &:before{
+                position: absolute;
+                content: '';
+                display: block;
+                width: 14px;
+                height: 14px;
+                top: 6px;
+                left: 0;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-image: url('../images/land/advantages/before.png');
+                @include respond-up-to(sm){
+                    top: -35px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                @include respond-exact(md){
+                    top: 4px;
+                    //left: -16px;
+                }
+            }
+            &:last-child(){
+                margin-bottom: 0;
+            }
+            @include respond-up-to(sm){
+                font-size: 18px;
+                padding-left: 0;
+                margin-bottom: 62px;
+                text-align: center;
+            }
+            @include respond-exact(md){
+                font-size: 18px;
+                padding-left: 33px;
+            }
+        }
+    }
+    .link{
+        font-weight: 700;
+        text-decoration: underline;
+        text-transform: uppercase;
+        @include respond-exact(lg){
+            display: none;
+        }
+        // @include respond-up-to(md){
+        //     display: none;
+        // }
+    }
+    .portrait{
+        margin-bottom: 85px;
+        @include respond-up-to(sm){
+            display: none;
+        }
+        @include respond-exact(md){
+            margin-bottom: 60px;
+        }
+    }
+    .dataWrapperTop{
+        border-bottom: 1px solid $border-color-light;
+        @include respond-up-to(sm){
+            border-bottom: 0;
+        }
+    }
+    .dataWrapperFlex{
+        display: flex;
+        flex-wrap: wrap;
+        .columnElement{
+            border-right: 1px solid $border-color-light;
+            width: 25%;
+            &:last-child(){
+                border-right: 1px solid transparent; 
+            }
+            @include respond-up-to(sm){
+                width: 100%;
+                border-right: 0;
+            }
+            .bottomInfo{
+                color: $black;
+                font-weight: 400;
+                text-align: center;
+                line-height: 1.5em;
+                text-transform: initial;
+                span{
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+            }
+        }
+        .upperColumn{           
+            padding: 0 60px 15px;
+            @include respond-up-to(sm){
+                padding: 26px 75px 38px;
+                border-bottom: 1px solid $border-color-light;
+                &:last-child(){
+                    border-bottom: 0;
+                }
+            }
+            @include respond-exact(md){
+                padding: 0 10px 15px;
+            }
+            p{
+                font-weight: 600;
+                color: $brand-green;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 1.5em;
+                &:first-child(){
+                    @include respond-up-to(sm){
+                        margin-bottom: 6px;
+                    }
+                }
+            }
+        }
+        .bottomColumn{        
+            p{
+                padding-top: 10px;
+                text-align: center;
+                line-height: 1.5em;
+                span{
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .dataWrapperTop{
+        .bottomInfo{
+            display: none;
+            @include respond-up-to(sm){
+                display: block;
+            }
+        }
+        
+    }
+    .dataWrapperBottom{
+        @include respond-up-to(sm){
+            display: none;
+        }
+    }
+}

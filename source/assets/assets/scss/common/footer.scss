@@ -1,0 +1,176 @@
+footer{
+	background: $brand-green;
+	padding: 38px 0 18px;
+	position: relative;
+	@include respond-up-to(sm){
+		padding: 5px 0 20px;
+	}
+	
+	.uppercase{
+		margin-bottom: 1px;
+		color: inherit;
+		font-size: inherit;
+	}
+
+	.bold{
+		color: $white;
+		font-weight: 700;
+		font-size: 13px;
+		@include respond-up-to(sm){
+			font-size: 10px;
+		}
+	}
+
+	.phone{
+		margin: 0px auto 5px;
+		&:last-of-type{
+			margin: 0px auto;
+		}
+
+	}
+
+	.col-heading{
+		margin-bottom: 13px;
+		font-size: 13px;
+		color: $white;
+		letter-spacing: 0.65px;
+		font-weight: 700;
+		@include respond-up-to(sm){
+			font-size: 10px;
+		}
+		@media screen and (device-aspect-ratio: 40/71) {
+			font-size: 9px;
+		}
+	}
+
+	.classic-txt{
+		color: $white;
+		font-size: 13px;
+		letter-spacing: 0.65px;
+		@include respond-up-to(sm){
+			font-size: 8px;
+			margin-top: 20px;
+		}
+		@media screen and (device-aspect-ratio: 40/71) {
+			font-size: 7px;
+		}
+		@include respond-exact(lg){
+			font-size: 12px;
+		}
+		span{
+			margin-bottom: 0;
+			font-size: 8px;
+			color: $white;
+			letter-spacing: 0.65px;
+			@include respond-up-to(sm){
+				font-size: 5px;
+			}
+		}
+		a{
+			margin-bottom: 0;
+			color: $white;
+			font-size: 13px;
+			font-weight: 700;
+			letter-spacing: 0.65px;
+			@include respond-up-to(sm){
+				font-size: 8px;
+			}
+			@media screen and (device-aspect-ratio: 40/71) {
+				font-size: 7px;
+			}
+		}
+	}
+
+	p, .privacy{
+		font-size: 13px;
+		letter-spacing: 0.05em;
+		color: $white;
+		@include respond-up-to(sm){
+			font-size: 8px;
+		}
+	}
+
+	ul{
+		list-style: none;
+		li{
+			margin-bottom: 9px;
+			@include respond-up-to(sm){
+				margin-bottom: 3px;
+			}
+			a, p{
+				color: $white;
+				font-size: 13px;
+				letter-spacing: 0.05em;
+				line-height: 1.4em;
+				@include respond-up-to(sm){
+					font-size: 10px;
+				}
+				// @include respond-exact(lg){
+				// 	font-size: 12px;
+				// }
+				&:hover{
+					color: $white;
+					font-size: 13px;
+				}
+				&:focus{
+					color: #fff;
+					font-size: 13px;
+					letter-spacing: .05em;
+					line-height: 1.4em;
+					@include respond-up-to(sm){
+						font-size: 10px;
+					}
+				}
+			}
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.pages-list{
+		margin-bottom: 28px;
+		
+	}
+
+	.address{
+		padding-left: 45px;
+		@include respond-up-to(lg){
+			padding-left: 0;
+		}
+	}
+
+	.phones{
+		padding-left: 70px;
+		@include respond-up-to(sm){
+			margin-bottom: 15px;
+		}
+		@include respond-up-to(lg){
+			padding-left: 0;
+		}
+	}
+
+	.idea{
+		font-size: 8px;
+		color: $white;
+		text-transform: uppercase;
+		text-align: right;
+		@include respond-up-to(sm){
+			font-size: 5px;
+		}
+		a{
+			color: $white;
+			text-transform: initial;
+			font-size: 13px;
+			font-weight: 700;
+			@include respond-up-to(sm){
+				font-size: 8px;
+			}
+			span{
+				color: inherit;
+				font-size: inherit;
+				font-weight: inherit;
+			}
+		}
+	}
+}

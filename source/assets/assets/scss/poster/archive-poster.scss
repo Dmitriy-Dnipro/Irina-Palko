@@ -1,0 +1,44 @@
+#posters-intro{
+	background : {
+		image: url('../images/posters/postersBackground.jpg');
+		size: cover;
+		repeat: no-repeat;
+		position: center center;
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(0.41deg, rgba(0, 0, 0, 0.8) 0.77%, rgba(0, 0, 0, 0.35) 112.93%);
+	}
+	h1{
+		margin-top: 38%;
+		@include respond-up-to(sm){
+			margin-top: 101%;
+		}
+		@include respond-exact(md){
+			margin-top: 513px;
+		}
+		@media screen and (min-width: 1230px) and (max-width: 1280px){
+			margin-top: 28%;
+		}
+	}
+}
+
+.archive-poster{
+	padding: 130px 0 75px !important;
+	position: relative;
+	@include respond-up-to(sm){
+		padding: 80px 0 35px !important;
+	}
+	.card-wrapper{
+		margin-bottom: 0 !important;
+	}
+	.card{
+		display: none;
+		margin: 5px auto 30px !important; 
+	}
+}

@@ -1,0 +1,131 @@
+#gallery-intro{
+	background : {
+		image: url(../images/gallery/backgroundGallery.jpg);
+		size: cover;
+		repeat: no-repeat;
+		position: center center;
+	}
+}
+
+#gallery-links{
+	padding: 85px 0 105px;
+	@include respond-up-to(sm){
+		padding: 30px 0 40px;
+	}
+	@include respond-exact(md){
+		padding: 55px 0 60px;
+	}
+	.link-wrapper{
+		border-radius: $radius;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+		max-width: 376px;
+		margin: 0 auto;
+		.links{
+			list-style: none;
+			display: -ms-flexbox;
+		    display: flex;
+		    -ms-flex-direction: row;
+		    flex-direction: row;
+		    -ms-flex-pack: center;
+		    justify-content: center;
+		    padding: 15px 0;
+			li{
+				width: 50%;
+				height: 52px;
+			    padding: 10px 20px;
+			    display: -ms-flexbox;
+			    display: flex;
+			    border-right: 1px solid $border-color;
+			    &:last-child{
+			    	border-right: 0;
+			    }
+			    a{
+			    	margin: auto;
+				    font-size: 12px;
+				    cursor: pointer;
+				    text-align: center;
+				    transition: all .25s ease-out;
+    				-webkit-transition: all .25s ease-out;
+				    &:hover{
+				    	font-weight: 600;
+				    }
+				    @include respond-up-to(sm){
+						font-size: 8px;
+					}
+			    }
+			}
+		}
+	}
+}
+
+#main-gallery{
+	position: relative;
+	padding: 0 0 300px;
+	@include respond-up-to(sm){
+		padding: 0 0 135px;
+	}
+	@include respond-exact(md){
+		padding: 0 0 135px;
+	}
+	h1{
+		font-size: 50px;
+		font-weight: 700;
+		letter-spacing: 2.5px;
+		margin-bottom: 5px;
+		@include respond-up-to(sm){
+			font-size: 32px;
+		}
+	}
+	.elements-wrapper{
+		padding-left: 15.6%;
+		overflow: hidden;
+		display: flex;
+		align-items: flex-start;
+		width: 100%;
+		@include respond-up-to(sm){
+			display: block;
+			padding-left: 15px;
+		}
+		@include respond-exact(md){
+			padding-left: 20px;
+		}
+		.description-block{
+			display: inline-block;
+			width: 276px;
+			.sub-gallery-text{
+				font-weight: 500;
+				font-size: 24px;
+				letter-spacing: 0.6px;
+				margin-bottom: 15px;
+				@include respond-up-to(sm){
+					font-size: 12px;
+					margin-bottom: 5px;
+				}
+			}
+			.arrow{
+				cursor: pointer;
+				@include respond-up-to(sm){
+					margin-bottom: 35px;
+				}
+			}
+		}
+		.gallery-block-with-flex{
+			display: flex;
+  			flex-wrap: nowrap;
+  			overflow-x: auto;
+  			cursor: move;
+  			width: calc(100% - 276px);
+  			@include respond-up-to(sm){
+				width: 100%;
+			}
+			.portfolio{
+				margin-right: 20px;
+				flex: 0 0 auto;
+				margin-bottom: 0;
+			}
+		}
+		::-webkit-scrollbar { 
+		    display: none; 
+		}
+	}
+}

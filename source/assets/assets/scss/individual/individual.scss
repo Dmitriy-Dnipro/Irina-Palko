@@ -1,0 +1,485 @@
+#individualIntro{
+    position: relative;
+    background : {
+        size: cover;
+        position: center center;
+        repeat: no-repeat;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.552486) 39.78%, #000000 100%);
+        mix-blend-mode: multiply;
+    }
+    h1{
+        letter-spacing: 0;
+        margin: 3% auto 0;
+        @include respond-up-to(sm){
+            font-size: 30px !important;
+        }
+        @include respond-up-to(md){
+            margin: 25% auto 0;
+        }
+        @include respond-exact(md){
+            font-size: 60px !important;
+        }
+    }
+
+    .common-button-styles{
+        position: absolute;
+        bottom: 12.5%;
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: $brand-green;
+        border-color: $brand-green;
+        color: $white;
+
+        &:hover{
+            background-color: transparent;
+            color: $brand-green;
+        }
+    }
+}
+
+#individual{
+    padding: 79px 0 88px;
+    @include respond-up-to(sm){
+        padding: 36px 0;
+    }
+    @include respond-exact(md){
+        padding: 42px 0 76px;
+    }
+    h2{
+        margin-bottom: 16px;
+        @include respond-up-to(sm){
+            margin-bottom: 9px;
+        }
+        @include respond-exact(md){
+            margin-bottom: 18px;
+        }
+    }
+    .subheading{
+        font-size: 24px;
+        margin-bottom: 16px;
+        @include respond-up-to(sm){
+            font-size: 14px;
+            margin-bottom: 57px;
+        }
+        @include respond-exact(md){
+            font-size: 22px;
+            margin-bottom: 71px;
+        }
+    }
+    
+    
+    .blockWrapper{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0 30px;
+        @include respond-up-to(sm){
+            padding: 0 15px;
+        }
+        .block{
+            width: 33.333%;
+            height: 220px;
+            position: relative;
+
+            transition: all ease-out 0.5s;
+            border-bottom: 1px solid #D8D8D8;
+            border-left: 1px solid #D8D8D8;
+
+            padding: 35px 45px;
+
+            @include respond-up-to(sm){
+                width: 50%;
+                height: 114px;
+                padding: 16px;
+            }
+            @include respond-exact(md){
+                height: 169px;
+            }
+            &:first-child, &:nth-child(2), &:nth-child(3){
+                border-top: 1px solid #D8D8D8;
+                border-left: 1px solid #D8D8D8;
+            }
+            &:nth-child(6), &:nth-child(3){
+                border-right: 1px solid #D8D8D8;
+            }
+            @include respond-up-to(sm){
+                &:nth-child(3){
+                    border-top: 0;
+                }
+                &:nth-child(2){
+                    border-right: 1px solid #D8D8D8;
+                }
+                &:nth-child(4){
+                    border-left: 0;
+                    border-right: 1px solid #D8D8D8;
+                }
+            }
+            .number{
+                font-size: 20px;
+                font-weight: 500;
+                color: $brand-green;
+                transition: all ease-out 0.5s;
+                @include respond-up-to(sm){
+                    font-size: 11px;
+                }
+            }
+            svg{
+                fill: $brand-green;
+                transition: all ease-out 0.5s;
+
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+        .current{
+            transform: scale(1.2);
+            background-color: $brand-green;
+            transition: all ease-out 0.5s;
+            z-index: 3;
+            .tabImage{
+                opacity: 1;
+                transition: all ease-out 0.5s;
+            }
+            .number{
+                color: $white;
+                transition: all ease-out 0.5s;
+            }
+            svg{
+                fill: $white !important;
+                transition: all ease-out 0.5s;
+            }
+            
+        }
+    }
+
+    .tab-content-work{
+        display: none;
+        p{
+            color: $brand-green;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 80px;
+            @include respond-up-to(sm){
+                font-size: 14px;
+                margin-bottom: 36px;
+            }
+            @include respond-exact(md){
+                font-size: 30px;
+                margin-bottom: 60px;
+            }
+            @include respond-exact(lg){
+                font-size: 36px;     
+            }
+        }
+    }
+    .tab-content-work.current{
+        display: block;
+    }
+}
+
+#format{
+    margin-bottom: 51px;
+    @include respond-up-to(sm){
+        margin-bottom: 35px;
+    }
+    @include respond-exact(md){
+        margin-bottom: 54px;
+    }
+    h2{
+        margin-bottom: 36px;
+        @include respond-exact(md){
+            margin-bottom: 64px;
+        }
+    }
+    .big-column-wrapper{
+        overflow: auto;
+        overflow-y: hidden;
+    }
+    .column-wrapper{
+        height: 811px;
+        overflow: hidden;
+        @include respond-up-to(sm){
+            height: 474px;
+            width: 567px;
+        }
+        @include respond-exact(md){
+            height: 644px;
+        }
+    }
+    .column {
+        width: 33.3333333333333333%;
+        height: inherit;
+        float: left;
+        margin: 0;
+        transition: all 0.5s ease;
+        display: flex;
+        position: relative;
+
+        background : {
+            position: center center;
+            size: cover;
+            repeat: no-repeat;
+        }
+
+        // &:before{
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     background: linear-gradient(0deg,rgba(0,0,0,.8),rgba(0,0,0,.8));
+        //     mix-blend-mode: multiply;
+        //     transition: all .3s ease-in;
+        // }
+        &:first-child{
+            background-image: url('../images/individual/first-third.jpg')
+        }
+        &:nth-of-type(2){
+            background-image: url('../images/individual/second-third.jpg')
+        }
+        &:nth-of-type(3){
+            background-image: url('../images/individual/third-third.jpg')
+        }
+        &.wide {
+            width: 55% !important;
+            transition: all 0.5s ease;
+        }
+        &:hover{
+            .text-block{
+                width: 580px;
+                ul{
+                    height: auto;
+                    opacity: 1;
+                    transition: all 0.5s ease;
+                    transition-delay: 0.75s; 
+                }
+            }
+        }
+    }
+    .text-block{
+        margin: auto;
+        width: auto;
+        z-index: 1;
+        p {
+            color: $white;
+            text-align: center;
+            font-weight: 900;
+            font-size: 24px;
+            text-transform: uppercase;
+            @include respond-up-to(sm){
+                font-size: 14px;
+            }
+            @include respond-exact(md){
+                font-size: 20px;
+            }
+        }
+
+        ul{
+            height:0;
+            opacity: 0; 
+            list-style: none;
+            transition: all 0 ease-out;
+            padding-top: 25px;
+            li{
+                color: $white;
+                margin-bottom: 57px;
+                padding-left: 45px;
+                position: relative;
+                @include respond-up-to(sm){
+                    font-size: 12px;
+                    margin-bottom: 12px;
+                }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    border: 4px solid $yellow;
+                    top: 3px;
+                    left: 0;
+                    @include respond-up-to(sm){
+                        left: 9px;
+                    }
+                }
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    
+}
+
+.individual-blueCounter{
+    @include respond-up-to(sm){
+        padding: 0 !important;
+        .cell-wrapper{
+            flex-direction: column !important;
+            .cell{
+                width: 100% !important;
+                border-bottom: 1px solid $white;
+                border-right: 0 !important;
+                padding: 20px 0 !important;
+                &:last-child{
+                    border-bottom: 0 !important;
+                }
+                .num{
+                    font-size: 24px !important;
+                    .statvalue{
+                        font-size: 1.0em !important;
+                    }
+                }
+                .subtitle{
+                    font-size: 16px !important;
+                }
+            }
+        }
+    }
+}
+
+.individual-coach{
+    h2{
+        @include respond-up-to(sm){
+            margin-bottom: 21px !important;
+        }
+        @include respond-exact(md){
+            margin-bottom: 33px !important;
+        }
+        @include respond-to(md){
+            margin-bottom: 51px !important;
+        }
+    }
+    background : {
+        position: calc(50% - 382px) bottom;
+        repeat: no-repeat;
+        image: url('../images/individual/palko-coach.png');
+        size: 581px 703px;
+    }
+    @include respond-exact(md){
+        background-position: calc(50% - 200px) bottom;
+        background-size: 495px auto;
+    }
+    @include respond-exact(md){
+        padding-bottom: 54px !important;
+    }
+    @include respond-to(md){
+        padding-bottom: 73px !important;
+    }
+    .description{
+        @include respond-up-to(sm){
+            margin-bottom: 0 !important;
+        }
+        @include respond-exact(md){
+            margin-bottom: 113px !important;
+        }
+        @include respond-to(md){
+            margin-bottom: 73px !important;
+        }
+    }
+    img{
+        @include respond-up-to(sm){
+            margin-bottom: 55px;
+        }
+    }
+    li{
+        margin-bottom: 26px !important;
+        @include respond-up-to(sm){
+            margin-bottom: 55px !important;
+            font-size: 16px !important;
+        }
+        @include respond-exact(md){
+            padding-left: 45px !important;
+        }
+        &:last-child{
+            margin-bottom: 0 !important;
+        }
+    }
+    .portrait{
+        margin-bottom: 0 !important;
+    }
+    .link{
+        @include respond-up-to(sm){
+            display: none;
+        }
+    }
+}
+
+.individual-clients{
+    h2{
+        @include respond-up-to(sm){
+            margin-bottom: 66px !important;
+        }
+    }
+    @include respond-up-to(sm){
+        padding: 70px 0 !important;
+    }
+    @include respond-exact(md){
+        padding: 74px 0 60px !important;
+    }
+    @include respond-to(md){
+        padding: 98px 0 90px !important;
+    }
+}
+
+.individual-success-feedback{
+    background: $background-color;
+    padding: 75px 0;
+    .subheading{
+        margin-bottom: 59px;
+        @include respond-up-to(sm){
+            margin-bottom: 39px;
+        }
+    }
+    @include respond-up-to(sm){
+        padding: 58px 0;
+    }
+    @include respond-exact(md){
+        padding: 58px 0 75px;
+    }
+}
+
+.individual-order-form{
+    padding: 74px 0 137px;
+    @include respond-up-to(sm){
+        padding: 37px 0 33px;
+    }
+    @include respond-exact(md){
+        padding: 64px 0 67px;
+    }
+    h2{
+        font-size: 24px;
+        margin-bottom: 114px;
+        @include respond-up-to(sm){
+            font-size: 16px;
+            margin-bottom: 38px;
+        }
+        @include respond-exact(md){
+            font-size: 18px;
+            margin-bottom: 77px;
+        }
+        span{
+            font-size: inherit;
+            color: $brand-green;
+            font-weight: 700;
+        }
+    }
+    .form-text{
+        @include respond-up-to(sm){
+            margin: 0 0 88px !important;
+        }
+    }
+}

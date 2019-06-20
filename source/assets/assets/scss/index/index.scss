@@ -1,0 +1,756 @@
+#intro{
+	background: rgba(23,23,23,.6);
+    mix-blend-mode: normal;
+	position: relative;
+	overflow: hidden;
+	@include respond-up-to(lg){
+		background : {
+			position: center center;
+			repeat: no-repeat;
+			size: cover;
+		}
+	}
+	@include respond-up-to(sm){
+		background-image: url('../images/index/mainBackgroundMobile.jpg');
+	}
+	@include respond-exact(md){
+		background-image: url('../images/index/mainBackgroundTablet.jpg');
+	}
+	@include respond-exact(lg){
+		background-image: url('../images/index/mainBackgroundTablet.jpg');
+	}
+	@include respond-up-to(md){
+		min-height: 100vh;
+		width: auto;
+	}
+	.flex-additional-wrap{
+		flex-direction: column;
+		h1{
+			margin-top: 12.5%;
+		}
+	}
+	
+	.get-video{
+		@extend .common-button;
+		display: block;
+		color: $white;
+		font-weight: 700;
+		letter-spacing: 0.09em;
+		
+		width: 278px;
+
+		padding: 13px 0;
+		margin: 0px auto;
+		z-index: 3;
+
+		background-color: $brand-green;
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+		@include respond-up-to(sm){
+			font-size: 10px;
+			width: 196px;
+		}
+		@include respond-exact(md){
+			width: 270px;
+			padding: 16px 0;
+			font-size: 14px;
+		}
+	}
+
+	video{
+		position: absolute;
+		top: 0; 
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		z-index: -1;
+		@include respond-up-to(lg){
+			display: none;
+		}
+	}
+	
+}
+
+#courses{
+	padding: 100px 0 125px;
+	@include respond-up-to(sm){
+		padding: 25px 0 95px;
+	}
+	@include respond-exact(md){
+		padding: 108px 0 226px;
+	}
+	.sub-heading{
+		margin-bottom: 43px;
+		@include respond-up-to(sm){
+			margin-bottom: 40px;
+		}
+		@include respond-exact(md){
+			margin-bottom: 64px;
+		}
+	}
+	.course{
+		max-width: 440px;
+		border-radius: $radius;
+		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+		margin: 7px auto;
+		@include respond-up-to(sm){
+			max-width: 265px;
+		}
+		&:hover{
+			.course-top-image{
+				&:after, &:before{
+					opacity: 1;
+				}
+			}
+		}
+		.course-top-image{
+			width: 100%;
+			height: 233px;
+			position: relative;
+			transition: all 0.5s;
+			border : {
+				top-left-radius: $radius;
+				top-right-radius: $radius;
+			} 
+			background : {
+				repeat: no-repeat;
+				size: cover;
+				position: center center;
+			}
+			@include respond-up-to(sm){
+				height: 154px;
+			}
+			&:before, &:after{
+				position: absolute;
+				content: '';
+				
+				opacity: 0;
+				transition: all 0.5s;
+			}
+			&:before{
+				width: 100%;
+				height: 3px;
+
+				bottom: 0;
+				left: 0;
+								
+				background : {
+					color: $brand-green;
+				}				
+			}
+			&:after{
+				width: 34px;
+				height: 17px;
+
+				bottom: -17px;
+				left: 50%;
+				transform: translateX(-50%);
+				
+				background : {
+					repeat: no-repeat;
+					position: center center;
+					image: url('../images/index/after.png');
+				}
+			}
+		}
+		.course-bottom-text{
+			padding: 35px 0;
+			@include respond-up-to(sm){
+				padding: 35px 13px;
+			}
+			h3{
+				font-size: 24px;
+				font-weight: 700;
+				text-align: center;
+				letter-spacing: 0.01em;
+				text-transform: uppercase;
+				color: $light-black;
+
+				margin-bottom: 21px;
+				@include respond-up-to(sm){
+					font-size: 16px;
+				}
+			}
+			p{
+				color: $paragraph-text;
+				padding: 0 45px;
+				margin-bottom: 40px;
+				@include respond-up-to(sm){
+					padding: 0;
+				}
+				@include respond-up-to(md){
+					font-size: 14px;
+				}
+			}
+			.link-to-more{
+				@extend .common-button;
+				border: 1px solid $brand-green;
+				padding: 10px 17px;
+
+				font-size: 14px;
+				font-weight: 700;
+
+				color: $brand-green;
+				
+				text-align: center;
+				letter-spacing: 0.09em;
+
+				width: 165px;
+				display: block;
+				margin: 0 auto;
+
+				&:hover{
+					background-color: $brand-green;
+					color: $white;
+				}
+			}
+		}
+		.common-button-styles{
+			border-color: $brand-green;
+			color: $brand-green;
+			background: transparent;
+			&:hover{
+				color: $white;
+				background: $brand-green;
+			}
+		}
+	}
+	.owl-nav{
+		button{
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+			span{
+				display: none;
+			}
+			background : {
+				position: center center;
+				repeat: no-repeat;
+				color: $white;
+			}
+			
+			position: absolute;
+
+			top: 50%;
+			transform: translateY(-50%);
+
+			@include respond-up-to(sm){
+				width: 25px;
+				height: 25px;
+				background-size: 25% auto;
+			}
+		}
+		.owl-prev{
+			background-image: url('../images/common/arrowLeftSlider.png');
+			left: 0;
+			right: auto;
+		}
+		.owl-next{
+			background-image: url('../images/common/arrowRightSlider.png');
+			left: auto;
+			right: 0;
+		}
+	}
+}
+
+.index-poster{
+	margin-bottom: 100px;
+	@include respond-up-to(sm){
+		margin-bottom: 132px;
+	}
+	@include respond-exact(md){
+		margin-bottom: 216px;
+	}
+}
+
+#feedback-slider{
+	background : {
+		image: url('../images/temp/reviewVackground.png');
+		repeat-x: repeat;
+		repeat-y: no-repeat;
+		size: 100% 354px;
+	}
+	@include respond-up-to(sm){
+		background-size: 100% 180px;
+	}
+	@include respond-exact(md){
+		background-size: 100% 390px;
+	}
+	.slider-content{
+		height: 354px;
+		p{
+			color: $white;
+			font-size: 16px;
+			margin-bottom: 45px;
+		}
+		.name{
+			font-size: 35px;
+			padding-top: 37px;
+			margin-bottom: 4px;
+		}
+		.position{
+			text-transform: uppercase;
+			margin-bottom: 29px;
+			@include respond-exact(lg){
+				font-size: 12px;
+			}
+		}
+		a{
+			text-transform: uppercase;
+			text-decoration: underline;
+			color: $white;
+			font-size: 14px;
+			font-weight: 700;
+			&:first-of-type{
+				margin-right: 10px;
+			}
+		}
+		@include respond-up-to(sm){
+			height: 180px;
+			p{
+				font-size: 8px;
+				margin-bottom: 16px;
+			}
+			.name{
+				font-size: 14px;
+				margin-bottom: 2px;
+				padding-top: 13px;		
+			}
+			.position{
+				font-size: 6px;
+				margin-bottom: 12px;
+			}
+			a{
+				font-size: 9px;
+			}
+			a.video{
+				@include respond-up-to(sm){
+					display: none;
+				}
+			}
+		}
+		@include respond-exact(md){
+			height: 390px;
+			p{
+				font-size: 16px;
+				margin-bottom: 31px;
+			}
+			.name{
+				font-size: 24px;
+				margin-bottom: 4px;
+				padding-top: 47px;		
+			}
+			.position{
+				font-size: 12px;
+				margin-bottom: 25px;
+			}
+			a{
+				font-size: 14px;
+			}
+		}
+	}
+	.slider-nav{
+		position: relative;
+		height: 354px;
+		@include respond-up-to(sm){
+			height: 240px;
+			margin: -30px 0 auto;
+			width: 100%;
+		}
+		@include respond-exact(md){
+			height: 558px;
+			margin: -84px 0 auto;
+		}
+		@include respond-to(md){
+			height: 600px;
+			margin: -123px 0 auto;
+			width: 370px;
+		}
+		.slick-arrow{
+			position: absolute;
+			width: 45px;
+			height: 45px;
+			background-size: 15px 6px;
+			border-radius: 50%;
+			left: 130%;
+			transform: translateX(-50%);
+			z-index: 3;
+			background : {
+				position: center center;
+				repeat: no-repeat;
+			}
+			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+			&:before{
+				display: none;
+			}
+			@include respond-up-to(sm){
+				width: 25px;
+				height: 25px;
+			}
+		}
+		.slick-prev{
+			background-image: url('../images/common/VectorTop.svg');
+			top: 45px;
+			@include respond-up-to(sm){
+				top: 0;
+			}
+			@include respond-exact(md){
+				top: 20px;
+			}
+		}
+		.slick-next{
+			bottom: 45px;
+			top: auto;
+			background-image: url('../images/common/VectorBottom.svg');
+			right: auto;
+			@include respond-up-to(sm){
+				bottom: 0;
+			}
+			@include respond-exact(md){
+				bottom: 20px;
+			}
+		}
+		.slick-list{
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+			@include respond-up-to(sm){
+				height: 240px !important;
+			}
+			@include respond-exact(md){
+				height: 558px !important;
+			}
+			@include respond-to(md){
+				height: 600px !important;
+			}
+			.slick-active{
+				@include respond-to(md){
+					position: relative !important;
+				}
+			}
+			.slick-slide{
+				border: 0;
+				overflow: hidden;
+				position: relative;
+				&:before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: linear-gradient(180deg,#646464 0,#c2c2c2 100%);
+					mix-blend-mode: multiply;
+					transition: 0.5s ease-in-out;
+				}
+				@include respond-up-to(sm){
+					height: 80px !important;
+				}
+				@include respond-exact(md){
+					height: 186px !important;
+				}
+				@include respond-to(md){
+					height: 200px !important;
+				}
+				.slider-nav-content{
+					@include respond-up-to(sm){
+						height: 80px;
+					}
+					@include respond-exact(md){
+						height: 186px;
+					}
+					@include respond-to(md){
+						height: 200px;
+					}
+					img{
+						margin: 0 auto;
+						@include respond-up-to(sm){
+							height: 80px;
+							max-width: fit-content;
+						}
+						@include respond-exact(md){
+							height: 186px;
+							max-width: fit-content;
+						}
+					}
+				}
+			}
+			.slick-center{
+				&:before{
+					display: none;
+					transition: 0.5s ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+.index-feedback-slider{
+	background-position: center 238px;
+	margin-bottom: 150px;
+	@include respond-up-to(sm){
+		background-position: center 126px;
+		margin-bottom: 209px;
+	}
+	@include respond-exact(md){
+		background-position: center 185px;
+		margin-bottom: 289px;
+	}
+	h2{
+		margin-bottom: 190px;
+		@include respond-up-to(sm){
+			margin-bottom: 70px;
+		}
+		@include respond-exact(md){
+			margin-bottom: 137px;
+		}
+	}
+}
+
+#clients{
+	padding:0 0 90px;
+	@include respond-exact(md){
+		padding: 0 0 138px;
+	}
+	h2{
+		margin-bottom: 90px;
+		@include respond-up-to(sm){
+			margin-bottom: 44px;
+		}
+		@include respond-exact(md){
+			margin-bottom: 95px;
+		}
+	}
+	.swiper-button-next{
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+		right: -15px;
+		background : {
+			position: center center;
+			repeat: no-repeat;
+			color: $white;
+			image: url('../images/common/arrowRightSlider.png');
+			size: auto;
+		}
+	}
+	.swiper-button-prev{
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+		left: -15px;
+		background : {
+			position: center center;
+			repeat: no-repeat;
+			color: $white;
+			image: url('../images/common/arrowLeftSlider.png');
+			size: auto;
+		}
+	}
+}
+
+#posts{
+	padding: 52px 0 90px;
+	@include respond-up-to(sm){
+		padding: 36px 0 53px;
+	}
+	@include respond-exact(md){
+		padding: 60px 0 66px;
+	}
+	background: $background-color;
+	.sub-heading{
+		margin-bottom: 60px;
+		@include respond-up-to(sm){
+			margin-bottom: 40px;
+		}
+		@include respond-exact(md){
+			margin-bottom: 50px;
+		}
+	}
+	
+	.post-wrapper{
+		border-radius: $radius;
+
+		margin: 10px auto;
+   		
+   		padding: 10px;
+		
+		display: flex;
+		flex-flow: row wrap;
+		
+
+		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08);
+
+		max-width: 557px;
+		@include respond-up-to(sm){
+			max-width: 279px;
+		}
+		@include respond-exact(md){
+			max-width: 540px;
+		}
+		.post-image{
+			width: 45%;
+			min-height: 348px;
+			border-radius: $radius;
+			background : {
+				image: url('../images/indexPosts/firstElem.jpg');
+				size: cover;
+				repeat: no-repeat;
+				position: center center;
+			}
+			@include respond-up-to(sm){
+				min-height: 190px;
+			}
+		}
+
+		.post-text{
+			width: 55%;
+			padding: 30px 8px 25px 25px;
+			@include respond-up-to(sm){
+				padding: 15px 8px 25px 20px;
+			}
+			h3{
+				font-size: 20px;
+				font-weight: 700;
+				margin-bottom: 25px;
+				@include respond-up-to(sm){
+					font-size: 14px;
+				}
+			}
+			p{
+				font-size: 14px;
+				margin-bottom: 26px;
+				@include respond-up-to(sm){
+					font-size: 10px;
+				}
+			}
+			a{
+				font-weight: 700;
+				font-size: 14px;
+				@include respond-up-to(sm){
+					font-size: 10px;
+				}
+
+				color: $brand-green;
+
+				text-decoration: underline;
+				text-transform: uppercase;
+				letter-spacing: 0.09em;
+
+				cursor: pointer;
+			}
+		}
+	}
+	.owl-nav{
+		button{
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+
+			@include respond-up-to(sm){
+				width: 25px;
+				height: 25px;
+				background-size: 25% auto;
+			}
+
+			span{
+				display: none;
+			}
+			background : {
+				position: center center;
+				repeat: no-repeat;
+				color: $white;
+			}
+			
+			position: absolute;
+
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.owl-prev{
+			background-image: url('../images/common/arrowLeftSlider.png');
+			left: 0;
+			right: auto;
+		}
+		.owl-next{
+			background-image: url('../images/common/arrowRightSlider.png');
+			left: auto;
+			right: 0;
+		}
+	}
+	.common-button-styles{
+		background-color: $brand-green;
+		border-color: $brand-green;
+		color: $white;
+		&:hover{
+			background-color: transparent;
+			color: $brand-green;
+		}
+	}
+}
+
+.index-posts{
+	margin-bottom: 43px;
+	@include respond-up-to(md){
+		margin-bottom: 140px;
+	}
+	.posts-wrapper{
+		margin-bottom: 81px;
+		@include respond-up-to(sm){
+			margin-bottom: 30px;
+		}
+		@include respond-exact(md){
+			margin-bottom: 104px;
+		}
+	}
+}
+
+#order-form{
+	position: relative;
+	.form-text{
+		margin-top: 140px;
+		padding: 55px 0;
+		position: relative;
+		border-top: 1px solid $black;
+		border-bottom: 1px solid $black;
+		@include respond-up-to(sm){
+			border-bottom: 0;
+			padding: 32px 0 0;
+			margin: 0 0 60px;
+		}
+		.top-form-text{
+			font-size: 50px;
+			font-weight: 700;
+			text-transform: uppercase;
+			span{
+				font-size: 24px;
+				font-weight: inherit;
+			}
+			@include respond-up-to(md){
+				font-size: 28px;
+				span{
+					font-size: 14px;
+				}
+			}
+			@include respond-exact(lg){
+				font-size: 40px;
+				span{
+					font-size: 20px;
+				}
+			}
+		}
+	}	
+}
+
+.index-order-form{
+	margin-bottom: 120px;
+	@include respond-up-to(sm){
+		margin-bottom: 127px;
+	}
+	@include respond-exact(md){
+		margin-bottom: 242px;
+	}
+}
